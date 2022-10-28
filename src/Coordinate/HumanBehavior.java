@@ -1,9 +1,10 @@
 package Coordinate;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Scanner;
-
+// add design elements
 public class HumanBehavior implements InputBehavior {
     HashMap<Character, Integer> reference = new HashMap<Character, Integer>();
 
@@ -33,29 +34,46 @@ public class HumanBehavior implements InputBehavior {
     public ArrayList<Integer> generateShipCoordinate(){
         ArrayList<Integer> output = new ArrayList<Integer>();
         Scanner InputScanner = new Scanner(System.in);
-        System.out.println("Enter Coordinates, separated by comma: ");
+        System.out.println("Enter coordinates, separated by comma.\nExample: A4,B4");
         String stringInput = InputScanner.nextLine();
         char[] arrayInput = stringInput.toCharArray();
 
         if(arrayInput.length != 5){
-            System.out.println("Invalid Input Format! Try again...");
+            System.out.println("Invalid input format! Try again...\n");
             return generateShipCoordinate();
         }
 
         if (arrayInput[2] != ','){
-            System.out.println("Invalid Input Format! Try again...");
+            System.out.println("Invalid input format! Try again...\n");
             return generateShipCoordinate();
         }
+
 
         for (int i = 0; i < 5; i++) {
             if (i != 2) {
                 if (reference.containsKey(arrayInput[i])) {
                     output.add(reference.get(arrayInput[i]));
                 } else {
-                    System.out.println("Invalid Coordinates! Try again...");
+                    System.out.println("X-coordinate must be in range A-J and y-coordinate must be in range 0-9!\nTry again...\n");
                     return generateShipCoordinate();
                 }
             }
+        }
+        if (output.get(0) == output.get(2) && output.get(1) == output.get(3)) {
+            System.out.println("Ship can not be placed in a single cell!\nTry again...\n");
+            return generateShipCoordinate();
+        }
+        if (output.get(0) != output.get(2) && output.get(1) != output.get(3)) {
+            System.out.println("Ships need to be placed either horizontally or vertically!\nTry again...\n");
+            return generateShipCoordinate();
+        }
+
+        // hier gilt für das Array entweder array[0] = array[2] (horizontal) oder array[1] = array[3] (vertikal)
+        if (output.get(0) == output.get(2) && output.get(1) > output.get(3)) {
+            Collections.swap(output,1,3);
+        }
+        if (output.get(1) == output.get(3) && output.get(0) > output.get(2)) {
+            Collections.swap(output,0,2);
         }
         return output;
     }
@@ -63,12 +81,12 @@ public class HumanBehavior implements InputBehavior {
     public ArrayList<Integer> generateShotCoordinate(){
         ArrayList<Integer> output = new ArrayList<Integer>();
         Scanner InputScanner = new Scanner(System.in);
-        System.out.println("Enter Coordinates: ");
+        System.out.println("Enter Coordinates:\nExample: A7");
         String stringInput = InputScanner.nextLine();
         char[] arrayInput = stringInput.toCharArray();
 
         if (arrayInput.length != 2){
-            System.out.println("Invalid Input Format! Try again...");
+            System.out.println("Invalid Input Format! Try again...\n");
             return generateShotCoordinate();
         }
 
@@ -76,7 +94,7 @@ public class HumanBehavior implements InputBehavior {
             output.add(reference.get(arrayInput[0]));
             output.add(reference.get(arrayInput[1]));
             }
-        else{System.out.println("Invalid Input! Try again...");
+        else{System.out.println("Invalid Input! Try again...\n");
         return generateShotCoordinate();}
         return output;
         }

@@ -7,7 +7,7 @@ public class Main {
         System.out.print(myFirst.x1 + " " + myFirst.y1 + "\n");
         System.out.print(myFirst.x2 + " " + myFirst.y2 + "\n");
 
-        ShotCoordinate mySecond = new ShotCoordinate(new HumanBehavior());
+        ShotCoordinate mySecond = new ShotCoordinate(new cpuBehavior());
         System.out.print(mySecond.x + " " + mySecond.y);
     }
 }
