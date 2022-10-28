@@ -11,7 +11,7 @@ public class Main {
         //ShotCoordinate mySecond = new ShotCoordinate(new cpuBehavior());
         //System.out.print(mySecond.x + " " + mySecond.y);
         HumanPlayer p1 = new HumanPlayer();
-        ShotCoordinate shot = p1.shoot();
-        System.out.println(shot.x + " " + shot.y);
+        ShotCoordinate shot1 = p1.shoot();
+        ShotCoordinate shot2 = p1.shoot();
     }
 }

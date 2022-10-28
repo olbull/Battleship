@@ -6,13 +6,14 @@ import java.util.ArrayList;
 import Coordinate.ShotCoordinate;
 
 
-public class cpuPlayer {
+public class cpuPlayer extends Player {
     Fleet fleet;
-    ArrayList<ShotCoordinate> ShotsFired = new ArrayList<ShotCoordinate>();
-    final InputBehavior ib = new cpuBehavior();
     // Attribute isAlive?
 
-    public cpuPlayer(){}//initialize fleet, call fleet.placeFleet
+    public cpuPlayer(){
+        this.ib = new cpuBehavior();
+        this.ShotsFired = new ArrayList<ShotCoordinate>();
+    }//initialize fleet, call fleet.placeFleet
     public void handleShot(){}
     public void checkFleet(){}
 }
