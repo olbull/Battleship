@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f9abcc38-be6b-42dc-9da3-dce40d22e456" name="Changes" comment="Joana &amp; Oli, Player shoot() implementiert in Superclass Player.&#10;Equals für ShotCoordinate implementiert.">
+    <list default="true" id="f9abcc38-be6b-42dc-9da3-dce40d22e456" name="Changes" comment="oli Grid und TargetGrid begonnen. Noch null auf keywords von Funktionen und Methoden gedacht. &#10;Implementationen in Grid, ausser PrintHeader. PrintBody in OceanGrid (nicht gemacht) müsste man --&gt; @Override&#10;man kann schiffe adden">
+      <change afterPath="$PROJECT_DIR$/src/Ships/BoatState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Grids/Grid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grids/Grid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Grids/OceanGrid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grids/OceanGrid.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Grids/TargetGrid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grids/TargetGrid.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ships/BattleShip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ships/BattleShip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ships/Carrier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ships/Carrier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ships/PatrolBoat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ships/PatrolBoat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ships/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ships/Ship.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ships/Submarine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ships/Submarine.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +23,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -91,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666978577768</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="oli Grid und TargetGrid begonnen. Noch null auf keywords von Funktionen und Methoden gedacht. &#10;Implementationen in Grid, ausser PrintHeader. PrintBody in OceanGrid (nicht gemacht) müsste man --&gt; @Override&#10;man kann schiffe adden">
+      <created>1666991799972</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1666991799972</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -110,7 +124,8 @@
     <MESSAGE value="Joana &amp; Oli, Coordinate Klasse fertig (bis auf Design-Elemente);" />
     <MESSAGE value="Joana &amp; Oli, Player shoot() implementiert in den Subclasses." />
     <MESSAGE value="Joana &amp; Oli, Player shoot() implementiert in Superclass Player.&#10;Equals für ShotCoordinate implementiert." />
-    <option name="LAST_COMMIT_MESSAGE" value="Joana &amp; Oli, Player shoot() implementiert in Superclass Player.&#10;Equals für ShotCoordinate implementiert." />
+    <MESSAGE value="oli Grid und TargetGrid begonnen. Noch null auf keywords von Funktionen und Methoden gedacht. &#10;Implementationen in Grid, ausser PrintHeader. PrintBody in OceanGrid (nicht gemacht) müsste man --&gt; @Override&#10;man kann schiffe adden" />
+    <option name="LAST_COMMIT_MESSAGE" value="oli Grid und TargetGrid begonnen. Noch null auf keywords von Funktionen und Methoden gedacht. &#10;Implementationen in Grid, ausser PrintHeader. PrintBody in OceanGrid (nicht gemacht) müsste man --&gt; @Override&#10;man kann schiffe adden" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

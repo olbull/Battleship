@@ -4,9 +4,14 @@ import Coordinate.ShipCoordinate;
 public abstract class Ship {
     int length;
     char letter;
-    boolean state; //implement state pattern!
-    int x1; int y1; int x2; int y2;
+    int hits;
+    BoatState state; //implement state pattern!
+    ShipCoordinate coordinates;
 
-    void placeShip(ShipCoordinate sc){
+    void placeShip(ShipCoordinate sc) {
+        this.coordinates = sc;
+    }
+
+    void hit() {
     }
 }
