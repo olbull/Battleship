@@ -1,5 +1,6 @@
 
 import Coordinate.*;
+import Grids.*;
 import Players.*;
 
 public class Main {
@@ -10,8 +11,21 @@ public class Main {
 
         //ShotCoordinate mySecond = new ShotCoordinate(new cpuBehavior());
         //System.out.print(mySecond.x + " " + mySecond.y);
-        HumanPlayer p1 = new HumanPlayer();
-        ShotCoordinate shot1 = p1.shoot();
-        ShotCoordinate shot2 = p1.shoot();
+        //HumanPlayer p1 = new HumanPlayer();
+        //ShotCoordinate shot1 = p1.shoot();
+       // ShotCoordinate shot2 = p1.shoot();
+
+        TargetGrid firstOne = new TargetGrid();
+        firstOne.draw();
+        //firstOne.editArrayShot(new ShotCoordinate(new HumanBehavior()), 's');
+       // firstOne.editArrayShot(new ShotCoordinate(new HumanBehavior()), 'p');
+       // firstOne.editArrayShot(new ShotCoordinate(new HumanBehavior()), 'l');
+       // firstOne.editArrayShot(new ShotCoordinate(new HumanBehavior()), 'e');
+       // firstOne.editArrayShot(new ShotCoordinate(new HumanBehavior()), 'e');
+       // firstOne.editArrayShot(new ShotCoordinate(new HumanBehavior()), 'n');
+      //  firstOne.editArrayShot(new ShotCoordinate(new HumanBehavior()), 'e');
+        firstOne.editArrayShip(new ShipCoordinate(new HumanBehavior()), '-');
+        firstOne.draw();
+
     }
 }
